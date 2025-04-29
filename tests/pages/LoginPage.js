@@ -1,4 +1,4 @@
-const { expert } = require('@playwright/test')
+const { expert, expect } = require('@playwright/test')
 
 export class LoginPage {
 
@@ -10,7 +10,7 @@ export class LoginPage {
         await this.page.goto('http://localhost:3000/admin/login')
 
         const loginForm = this.page.locator('.login-form')
-        await expert(loginForm).toBeVisible()
+        await expect(loginForm).toBeVisible()
     }
 
     async submit(email, passaword) {
@@ -19,9 +19,9 @@ export class LoginPage {
         await this.page.getByText('Entrar').click()
     }
 
-    async isLoggerId() {
+    async isLoggerIn() {
         await this.page.waitForLoadState('networkidle')
-        await expert(this.page).toHavenURL(/.*admin/)
+        await expect(this.page).toHaveURL(/.*admin/)
     }
 
 }
