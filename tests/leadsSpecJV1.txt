@@ -1,0 +1,140 @@
+// @ts-check
+import { test, expect } from '@playwright/test';
+
+//visit
+test('deve cadastrar um lead na fila de espera', async ({ page }) => {
+  await page.goto('http://localhost:3000')
+
+
+  //em Elements do console xPath (//button[text()='Aperte o play... se tiver coragem'])
+  // await page.click('//button[text()="Aperte o play... se tiver coragem"]')
+
+  //outra forma de buscar um componente na tela
+  // await page.getByRole('button',{name:"Aperte o play... se tiver coragem"}).click
+
+  //*********open leadModal
+  //outra forma de buscar um componente na tela
+  await page.getByRole('button',{name: /Aperte o play/}).click()
+
+  //essa função busca elementos que tem propriedade data-test-id e não a propriedade id que precisamos
+  // await page.getByTestId('name').fill('jc@test.com')
+
+  // await page.locator('#name').fill('jc a')
+
+  //outra forma de criar apção de buscar um elemento quando não temos um ID do elemento - ('ELEMENTO[PROP=VALUE]')
+  // await page.locator('input[name=name]').fill('jc a')
+
+  //imput utilizando placeholder do campo (Obs o valor precisa estar entre "aspas")
+  // await page.locator('input[placeholder="Seu nome completo"]').fill('jc a')
+
+  //imput utilizando placeholder do campo (Obs o valor precisa estar entre \'aspas\')
+  // await page.locator('input[placeholder=\'Seu nome completo\']').fill('jc a')
+
+  //**** submitLeadForm
+  //forma de buscar um elemento da tela de fazer um "ASSERT" do esperado, nesta função chamamos ..
+  // um awaitna tela
+  // o GetHoke passamos o heading, para mencionar que estamos buscando no titulo
+  await expect(
+    page.getByTestId('modal').getByRole('heading')
+  ).toHaveText('Fila de espera')
+  //FIM open leadModal
+
+  //*****toasHavenText
+  //função para inputar dado diretamente utilizando um placeholder
+  await page.getByPlaceholder('Informe seu nome').fill('jc a')
+  await page.getByPlaceholder('Informe seu email').fill('jc@test.com')
+  //*** FIM submidLeadForma
+
+  // await page.getByText('Quero entrar na fila!').click()
+
+  // await page.getByRole('button',{name: /Quero entrar na fila/}).click
+
+  await page.getByTestId('modal')
+    .getByText('Quero entrar na fila!').click()
+
+    //no modo ui (npx playwright test --ui), podemos pegar um dado flutuante na tela e salvar o html para facilitar a idenficação do dado
+  // await page.getByText('seus dados conosco').click()
+  // const content = await page.content()
+  // console.log(content)
+
+  const message = 'Agradecemos por compartilhar seus dados conosco. Em breve, nossa equipe entrará em contato!'
+  await expect(page.locator('.toast')).toHaveText(message)
+
+  //WAIT
+  // await page.waitForTimeout(5000)
+
+  await expect(page.locator('.toast')).toBeHidden({timeout: 5000})
+});
+
+test('nao deve cadastrar com e-mail incorreto', async ({ page }) => {
+  await page.goto('http://localhost:3000');
+
+  await page.getByRole('button',{name: /Aperte o play/}).click()
+
+  await expect(
+    page.getByTestId('modal').getByRole('heading')
+  ).toHaveText('Fila de espera')
+  
+  await page.getByPlaceholder('Informe seu nome').fill('jc a')
+  await page.getByPlaceholder('Informe seu email').fill('jctest.com')
+
+  await page.getByTestId('modal')
+    .getByText('Quero entrar na fila!').click()
+
+  await expect(page.locator('.alert')).toHaveText('Email incorreto')
+});
+
+test('nao deve cadastrar quando o nome é não preenchido', async ({ page }) => {
+  await page.goto('http://localhost:3000');
+
+  await page.getByRole('button',{name: /Aperte o play/}).click()
+
+  await expect(
+    page.getByTestId('modal').getByRole('heading')
+  ).toHaveText('Fila de espera')
+  
+  await page.getByPlaceholder('Informe seu email').fill('jc@test.com')
+
+  await page.getByTestId('modal')
+    .getByText('Quero entrar na fila!').click()
+
+  await expect(page.locator('.alert')).toHaveText('Campo obrigatório')
+});
+
+test('nao deve cadastrar quando o email não é preenchido', async ({ page }) => {
+  await page.goto('http://localhost:3000');
+
+  await page.getByRole('button',{name: /Aperte o play/}).click()
+
+  await expect(
+    page.getByTestId('modal').getByRole('heading')
+  ).toHaveText('Fila de espera')
+  
+  await page.getByPlaceholder('Informe seu nome').fill('jc a')
+  
+  await page.getByTestId('modal')
+    .getByText('Quero entrar na fila!').click()
+
+  await expect(page.locator('.alert')).toHaveText('Campo obrigatório')
+});
+
+test('nao deve cadastrar quando nenhum campo é preenchido', async ({ page }) => {
+  await page.goto('http://localhost:3000');
+
+  await page.getByRole('button',{name: /Aperte o play/}).click()
+
+  await expect(
+    page.getByTestId('modal').getByRole('heading')
+  ).toHaveText('Fila de espera')
+  
+  await page.getByTestId('modal')
+    .getByText('Quero entrar na fila!').click()
+
+  await expect(page.locator('.alert')).toHaveText([
+    'Campo obrigatório',
+    'Campo obrigatório'
+  ])
+
+});
+
+
