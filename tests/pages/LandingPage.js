@@ -28,16 +28,16 @@ export class LandingPage {
         .getByText('Quero entrar na fila!').click()
     }
 
-    async toastHaveText(message) {
-        const toast = this.page.locator('.toast')
+    // async toastHaveText(message) {
+    //     const toast = this.page.locator('.toast')
 
-        await expect.toHaveText(message)
+    //     await expect.toHaveText(message)
 
-        //toBeHiden - 
-        // await expect(toast).toBeHidden({timeout: 5000})
-        //not.toBeVidible - Garante que o elemento não esta visivel mas pode exitir no HTML
-        await expect(toast).not.toBeVisible({ timeout: 5000 })
-    }
+    //     //toBeHiden - 
+    //     // await expect(toast).toBeHidden({timeout: 5000})
+    //     //not.toBeVidible - Garante que o elemento não esta visivel mas pode exitir no HTML
+    //     await expect(toast).not.toBeVisible({ timeout: 5000 })
+    // }
 
     async alertHaveText(target) {
         await expect(this.page.locator('.alert')).toHaveText(target)

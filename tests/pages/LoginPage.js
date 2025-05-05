@@ -30,4 +30,22 @@ export class LoginPage {
         await expect(this.page).toHaveURL(/.*admin/)
     }
 
+    async alertEmailHaveText(text){
+        const alert = this.page.locator('.email-alert')
+        await expect(alert).toHaveText(text)
+    }
+
+    async alertPassworkHaveText(text){
+        const alert = this.page.locator('.password-alert')
+        await expect(alert).toHaveText(text)
+    }
+
+    //forma simplificada de utilizando expressão regular onde posso utilizar uma palavra chave e substituir os metodos de e-mail e senha e usar um genérico
+    async alertHaveText(text){
+        const alert = this.page.locator('span[class$=alert]')
+        await expect(alert).toHaveText(text)
+    }
+
+    
+
 }
