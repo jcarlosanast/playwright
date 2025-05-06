@@ -1,8 +1,35 @@
-const { test, expect } = require('@playwright/test')
+const { test } = require('@playwright/test')
 
+const data = require('../support/fixtures/movies.json')
 
-test('deve poder cadastar um novo filme', (page) => {
+const { LoginPage } = require('../pages/LoginPage')
+const { MoviesPage } = require('../pages/MoviesPage')
+const { Toast } = require('../pages/Components')
+// const { create } = require('domain')
+// const { title } = require('process')
+
+let loginPage
+let moviesPage
+let toast
+
+test.beforeEach(({ page }) => {
+    loginPage = new LoginPage(page)
+    moviesPage = new MoviesPage(page)
+    toast = new Toast(page)
+})
+
+test('deve poder cadastar um novo filme', async ({ page }) => {
 
     //é importante estar logado
+
+    const movie = data.create
+
+    await loginPage.visit()
+    await loginPage.submit('admin@zombieplus.com', 'pwd123')
+    await moviesPage.isLoggerIn()
+
+    await moviesPage.create(movie.title, movie.overview, movie.company, movie.release_year)
+
+    await toast.containText('Cadastro realizado com sucesso!')
 
 })

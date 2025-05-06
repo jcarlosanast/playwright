@@ -23,13 +23,6 @@ export class LoginPage {
         await this.page.getByText('Entrar').click()
     }
 
-    async isLoggerIn() {
-        //quando todo o trafico de rede finaliza (a requisição acaba, todo trafico de rede ocorrer)
-        await this.page.waitForLoadState('networkidle')
-        //Verifica se na URL tem a palavra mencionada
-        await expect(this.page).toHaveURL(/.*admin/)
-    }
-
     async alertEmailHaveText(text){
         const alert = this.page.locator('.email-alert')
         await expect(alert).toHaveText(text)

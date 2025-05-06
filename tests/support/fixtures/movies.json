@@ -1,0 +1,82 @@
+{
+    "create": {
+        "title": "A Noite dos Mortos-Vivos",
+        "overview": "Um grupo de pessoas se refugia em uma casa isolada para escapar de zumbis canibais que surgem após um evento misterioso.",
+        "company": "NetFlix",
+        "release_year": 1972,
+        "featured": false,
+        "cover": "images/night_of_the_living_dead.png"
+    },
+    "madrugada_dos_mortos": {
+        "title": "Madrugada dos Mortos",
+        "overview": "Sobreviventes de um surto zumbi se escondem em um shopping enquanto o caos domina o mundo exterior.",
+        "company": "Universal Pictures",
+        "release_year": 2004,
+        "featured": false,
+        "cover": "images/dawn_of_the_dead.png"
+    },
+    "guerra_mundial_z": {
+        "title": "Guerra Mundial Z",
+        "overview": "Um ex-investigador da ONU viaja pelo mundo tentando encontrar uma solução para uma pandemia zumbi global.",
+        "company": "Paramount Pictures",
+        "release_year": 2013,
+        "featured": false,
+        "cover": "images/world_war_z.png"
+    },
+    "zumbilandia": {
+        "title": "Zumbilândia",
+        "overview": "Quatro sobreviventes improváveis tentam sobreviver e encontrar um lugar seguro durante o apocalipse zumbi.",
+        "Company": "Columbia Pictures",
+        "Release_year": 2009,
+        "featured": false,
+        "cover": "images/zombieland.png"
+    },
+    "invasao_zumbi": {
+        "title": "Invasão Zumbi",
+        "overview": "Durante uma epidemia zumbi na Coreia do Sul, passageiros de um trem lutam para sobreviver enquanto viajam para Busan.",
+        "Company": "Next Entertainment World",
+        "Release_year": 2016,
+        "featured": false,
+        "cover": "images/train_to_busan.png"
+    },
+    "exterminio": {
+        "title": "Extermínio",
+        "overview": "Um vírus transforma humanos em assassinos violentos e um grupo de sobreviventes tenta resistir no Reino Unido devastado.",
+        "Company": "Fox Searchlight Pictures",
+        "Release_year": 2002,
+        "featured": false,
+        "cover": "images/28_days_later.png"
+    },
+    "todo_mundo_quase_morto": {
+        "title": "Todo Mundo Quase Morto",
+        "overview": "Um homem comum decide salvar seus entes queridos durante um apocalipse zumbi, com muito humor britânico.",
+        "Company": "Universal Pictures",
+        "Release_year": 2004,
+        "featured": false,
+        "cover": "images/shaun_of_the_dead.png"
+    },
+    "rec": {
+        "title": "REC",
+        "overview": "Uma repórter e seu cinegrafista ficam presos em um prédio contaminado por um vírus que transforma as pessoas em zumbis.",
+        "Company": "Filmax",
+        "Release_year": 2007,
+        "featured": false,
+        "cover": "images/rec.png"
+    },
+    "o_despertar_dos_mortos": {
+        "title": "O Despertar dos Mortos",
+        "overview": "Durante uma epidemia zumbi, um grupo se abriga em um shopping center para escapar do colapso da civilização.",
+        "Company": "United Film Distribution Company",
+        "Release_year": 1978,
+        "featured": false,
+        "cover": "images/dawn_of_the_dead_1978.png"
+    },
+    "resident_evil": {
+        "title": "Resident Evil: O Hóspede Maldito",
+        "overview": "Uma equipe de soldados tenta conter um surto zumbi causado por uma arma biológica nos laboratórios da Umbrella Corporation.",
+        "Company": "Screen Gems",
+        "Release_year": 2002,
+        "featured": false,
+        "cover": "images/resident_evil.png"
+    }
+}

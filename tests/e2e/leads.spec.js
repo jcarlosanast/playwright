@@ -2,7 +2,7 @@
 const { test, expect } = require( '@playwright/test');
 const { faker, fa } = require('@faker-js/faker');
 const { LandingPage } = require('../pages/LandingPage')
-const { Toast } = require('../pages/Componentes');
+const { Toast } = require('../pages/Components');
 const { ok } = require('assert');
 
 let landingPage 
@@ -34,7 +34,7 @@ test('deve cadastrar um lead na fila de espera', async ({ page }) => {
 
   const message = 'Agradecemos por compartilhar seus dados conosco. Em breve, nossa equipe entrará em contato!'
 
-  await toast.HaveText(message)
+  await toast.containText(message)
 });
 
 test('não deve cadastrar quando um e-mail já existe', async ({ page, request }) => {
@@ -53,8 +53,6 @@ test('não deve cadastrar quando um e-mail já existe', async ({ page, request }
 
   expect(newLead.ok()).toBeTruthy()
 
-
-
   await landingPage.visit()
   await landingPage.openLeadModal()
   await landingPage.submitLeadForm(leadName, leadEmail)
@@ -65,7 +63,7 @@ test('não deve cadastrar quando um e-mail já existe', async ({ page, request }
 
   const message = 'O endereço de e-mail fornecido já está registrado em nossa fila de espera.'
 
-  await toast.HaveText(message) 
+  await toast.containText(message) 
 });
 
 test('nao deve cadastrar com e-mail incorreto', async ({ page }) => {
