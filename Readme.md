@@ -23,7 +23,12 @@ npm install
 npx playwright test 
 ```
 
-3. Executar ver o relatório dos testes
+3. Executar testes em interface gráfica
+```
+npx playwright test --ui
+```
+
+4. Executar ver o relatório dos testes
 ```
 npx playwright show-report
 ```
