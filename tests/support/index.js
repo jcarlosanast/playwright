@@ -1,4 +1,4 @@
-const { test: base } = require('@playwright/test')
+const { test: base, expect } = require('@playwright/test')
 
 const { LandingPage } = require('../pages/LandingPage')
 const { LoginPage } = require('../pages/LoginPage')
@@ -17,4 +17,4 @@ const test = base.extend({
     }
 })
 
-export { test }
+export { test, expect }

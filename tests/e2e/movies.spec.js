@@ -4,7 +4,7 @@ const data = require('../support/fixtures/movies.json')
 
 const { executeSQL } = require('../support/database')
 
-test('deve poder cadastar um novo filme', async ({ page }) => {
+test('deve poder cadastar um novo filme', async ({ page, }) => {
 
     //é importante estar logado
 
