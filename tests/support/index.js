@@ -1,9 +1,9 @@
 const { test: base, expect } = require('@playwright/test')
 
-const { LandingPage } = require('../pages/LandingPage')
-const { LoginPage } = require('../pages/LoginPage')
-const { MoviesPage } = require('../pages/MoviesPage')
-const { Toast } = require('../pages/Components')
+const { Leads } = require('../actions/Leads')
+const { Login } = require('../actions/Login')
+const { Movies } = require('../actions/Movies')
+const { Toast } = require('../actions/Components')
 
 // landing: new LandingPage(page),
 // login: new LoginPage(page),
@@ -16,9 +16,9 @@ const test = base.extend({
         //Será o novo contexto que vai ter todos os contextos nativos do Playwright
         const context = page
 
-        context['landing'] = new LandingPage(page)
-        context['login'] = new LoginPage(page)
-        context['movies'] = new MoviesPage(page)
+        context['leads'] = new Leads(page)
+        context['login'] = new Login(page)
+        context['movies'] = new Movies(page)
         context['toast'] = new Toast(page)
 
         await use(context)

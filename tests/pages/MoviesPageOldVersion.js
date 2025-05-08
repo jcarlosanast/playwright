@@ -13,31 +13,34 @@ export class MoviesPage {
         await expect(this.page).toHaveURL(/.*admin/)
     }
 
-    async create(movie) {
+    async create(title, overview, company, release_year) {
+
+        await this.page.locator('a[href$="register"]').click()
 
         //a[href$="register"]
         //a[href*="register"] Utilizando * podemos utilizar pois é una referencia para "Contens"
-        await this.page.locator('a[href$="register"]').click()
         
-        await this.page.getByLabel('Titulo do filme').fill(movie.title)
-        await this.page.getByLabel('Sinopse').fill(movie.overview)
+        await this.page.getByLabel('Titulo do filme').fill(title)
+        await this.page.getByLabel('Sinopse').fill(overview)
 
         await this.page.locator('#select_company_id .react-select__indicator')
             .click()
 
         await this.page.locator('.react-select__option')
-            .filter({ hasText: movie.company })
+            .filter({ hasText: company })
             .click()
 
         await this.page.locator('#select_year .react-select__indicator')
             .click()
 
         await this.page.locator('.react-select__option')
-            .filter({ hasText: movie.release_year })
+            .filter({ hasText: release_year })
             .click()
 
         await this.page.getByRole('button',{name: 'Cadastrar'}).click()
 
     }
+
+    
 
 }

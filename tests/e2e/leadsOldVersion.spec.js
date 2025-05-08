@@ -1,8 +1,8 @@
 const { test, expect } = require('@playwright/test');
 const { faker } = require('@faker-js/faker');
 
-const { LandingPage } = require('../pages/LandingPage')
-const { Toast } = require('../pages/Components');
+const { LandingPage } = require('../pages/LandingPageOldVersion')
+const { Toast } = require('../pages/ComponentsOldVersion');
 const { ok } = require('assert');
 
 let landingPage

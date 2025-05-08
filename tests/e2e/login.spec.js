@@ -3,7 +3,7 @@ const { test, expect } = require('../support')
 test('deve logar como administrador', async ({ page }) => {
     await page.login.visit()
     await page.login.submit('admin@zombieplus.com', 'pwd123')
-    await page.movies.isLoggerIn()
+    await page.login.isLoggerIn()
 })
 
 test('não deve logar como  senha incorreta', async ({ page }) => {
@@ -37,5 +37,6 @@ test('não deve logar quando nenhum campo é preenchido', async ({ page }) => {
     await page.login.submit('', '')
     await page.login.alertHaveText(['Campo obrigatório','Campo obrigatório'])
 })
+
 
 

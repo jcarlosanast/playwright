@@ -4,9 +4,9 @@ const data = require('../support/fixtures/movies.json')
 
 const { executeSQL } = require('../support/database')
 
-const { LoginPage } = require('../pages/LoginPage')
-const { MoviesPage } = require('../pages/MoviesPage')
-const { Toast } = require('../pages/Components')
+const { LoginPage } = require('../pages/LoginPageOldVersion')
+const { MoviesPage } = require('../pages/MoviesPageOldVersion')
+const { Toast } = require('../pages/ComponentsOldVersion')
 
 let loginPage 
 let moviesPage 

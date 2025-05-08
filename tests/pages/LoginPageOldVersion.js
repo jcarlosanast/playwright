@@ -39,6 +39,4 @@ export class LoginPage {
         await expect(alert).toHaveText(text)
     }
 
-    
-
 }
