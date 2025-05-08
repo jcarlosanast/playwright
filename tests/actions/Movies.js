@@ -37,6 +37,8 @@ export class Movies {
         await this.page.locator('.react-select__option')
             .filter({ hasText: movie.release_year })
             .click()
+
+        await this.submit()
     }
 
     async alertHaveText(target) {
