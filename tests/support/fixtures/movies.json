@@ -1,11 +1,11 @@
 {
-    "create": {
+    "a_noite_dos_mortos_vivos": {
         "title": "A Noite dos Mortos-Vivos",
         "overview": "Um grupo de pessoas se refugia em uma casa isolada para escapar de zumbis canibais que surgem após um evento misterioso.",
         "company": "NetFlix",
         "release_year": 1972,
-        "featured": false,
-        "cover": "images/night_of_the_living_dead.png"
+        "featured": true,
+        "cover": "/covers/movies/mortos-vivos.jpg"
     },
     "madrugada_dos_mortos": {
         "title": "Madrugada dos Mortos",
@@ -13,7 +13,7 @@
         "company": "Universal Pictures",
         "release_year": 2004,
         "featured": false,
-        "cover": "images/dawn_of_the_dead.png"
+        "cover": "/covers/movies/madrugada.jpg"
     },
     "guerra_mundial_z": {
         "title": "Guerra Mundial Z",
