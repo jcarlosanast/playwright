@@ -7,9 +7,9 @@ export class Login {
     }
 
     async do(email, password, username){
-        this.visit()
-        this.submit(email, password)
-        this.isLoggerIn(username)
+        await this.visit()
+        await this.submit(email, password)
+        await this.isLoggerIn(username)
     }
 
     async visit() {

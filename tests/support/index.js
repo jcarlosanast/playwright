@@ -4,9 +4,10 @@ const { Leads } = require('./actions/Leads')
 const { Login } = require('./actions/Login')
 const { Movies } = require('./actions/Movies')
 const { Toast } = require('./actions/Components')
+const { Api } = require('./api')
 
 // landing: new LandingPage(page),
-// login: new LoginPage(page),
+// login: new LoginPage(page)
 // movies: new MoviesPage(page),
 // toast: new Toast(page)
 
@@ -22,6 +23,14 @@ const test = base.extend({
         context['toast'] = new Toast(page)
 
         await use(context)
+    },
+
+    request: async ({ request }, use) => {
+        const context = request
+        context['api'] = new Api(request)
+
+        await use(context)
+
     }
 })
 
