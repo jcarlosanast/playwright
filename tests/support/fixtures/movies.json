@@ -21,7 +21,7 @@
         "company": "Paramount Pictures",
         "release_year": 2013,
         "featured": false,
-        "cover": "images/world_war_z.png"
+        "cover": "/covers/movies/wwz.png"
     },
     "zumbilandia": {
         "title": "Zumbilândia",
@@ -37,7 +37,7 @@
         "Company": "Next Entertainment World",
         "Release_year": 2016,
         "featured": false,
-        "cover": "images/train_to_busan.png"
+        "cover": "/covers/movies/invazao-zumbi.jpg.png"
     },
     "exterminio": {
         "title": "Extermínio",

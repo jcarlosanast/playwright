@@ -25,12 +25,9 @@ export class Api {
         //Neste caso pegou o token que retornar no reponse
         //Passamos nessa requisção o valor que pode se setado antes da massa recebida
         this.token = 'Bearer ' + body.token
-
     }
 
-    async getCompanyIdByName(company) {
-        await this.setToken()
-
+    async getCompanyIdByName(companyName) {
         const response = await this.request.get('http://localhost:3333/companies', {
             headers: {
                 Authorization: this.token,
@@ -45,25 +42,23 @@ export class Api {
         const body = JSON.parse(await response.text())
 
         return body.data[0].id
+
     }
 
     async postMovie(movie) {
 
-        // const companyId = this.getCompanyIdByName(movie.company)
-
-        await this.setToken()
+        const companyId = await this.getCompanyIdByName(movie.company)
 
         const response = await this.request.post('http://localhost:3333/movies', {
             headers: {
                 Authorization: this.token,
-                ContentType: 'mulmultipart/form-data',
+                ContentType: 'multipart/form-data',
                 Accept: 'application/json, text/plain, */*'
             },
             multipart: {
                 title: movie.title,
                 overview: movie.overview,
-                // company_id: companyId,
-                company_id: '61830204-ace4-42f1-858d-e522dd52fd71',
+                company_id: companyId,
                 release_year: movie.release_year,
                 featured: movie.featured
             }

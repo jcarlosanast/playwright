@@ -54,5 +54,18 @@ export class Movies {
         await expect(this.page.locator('.alert')).toHaveText(target)
     }
 
+    async remove(title) {
+
+    //Exemplo de um Xpath para chamar um atributo dentro de um valor - //td[text()="Guerra Mundial Z"]/..//button
+    //neste exemplo busco um botão dento de um TD
+
+    await page.getByText('row', {name: movie.title}).getByRole('button').click()
+
+    //esta chamada esta clicando no neste elemento e este elemento é uma classa
+    // await page.click('.request-removal')
+    
+    await page.click('.confirm-removal')
+
+    }
 
 }
