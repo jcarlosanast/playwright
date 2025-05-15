@@ -1,6 +1,6 @@
 const { expect } = require('@playwright/test')
 
-export class Toast {
+export class Popup {
 
     constructor(page) {
         this.page = page
@@ -10,6 +10,7 @@ export class Toast {
         const element = this.page.locator('.swal2-html-container')
 
         await expect(element).toHaveText(message)
-        // await expect(toast).not.toBeVisible({ timeout: 5000 })
+        // essa função abaixo se enquadra para o TOAST quando tem um elemento flutuante, que some depois de segundos
+        // await expect(element).not.toBeVisible({ timeout: 5000 })
     }
 }

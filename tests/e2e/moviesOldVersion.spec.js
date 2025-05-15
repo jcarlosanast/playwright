@@ -25,7 +25,8 @@ test('deve poder cadastar um novo filme', async ({ page }) => {
     const movie = data.create
 
     //Corrigir teste no futuro passand os parametros de acesso ao BD no arquivo database.js
-    // await executeSQL(`delete from movies where title = '${movie.title}';`)
+    //CORRIGIDO conexão com BD
+    // await executeSQL(`DELETE from movies WHERE title = '${movie.title}';`)
 
     await loginPage.visit()
     await loginPage.submit('admin@zombieplus.com', 'pwd123')
