@@ -41,13 +41,21 @@ export class Movies {
         await this.page.locator('input[name=cover]')
             .setInputFiles('tests/support/fixtures' + movie.cover)
 
-            //IF interessante que verifica um valor esperado e alterado conforme necessidade
-            
-        if (movie.featured){
+        //IF interessante que verifica um valor esperado e alterado conforme necessidade
+
+        if (movie.featured) {
             await this.page.locator('.featured .react-switch').click()
         }
 
         await this.submit()
+    }
+
+    async search(target) {
+        await this.page.getByPlaceholder('Busque pelo nome')
+            .fill(target)
+
+        await this.page.click('.actions button')
+
     }
 
     async alertHaveText(target) {
@@ -56,15 +64,15 @@ export class Movies {
 
     async remove(title) {
 
-    //Exemplo de um Xpath para chamar um atributo dentro de um valor - //td[text()="Guerra Mundial Z"]/..//button
-    //neste exemplo busco um botão dento de um TD
+        //Exemplo de um Xpath para chamar um atributo dentro de um valor - //td[text()="Guerra Mundial Z"]/..//button
+        //neste exemplo busco um botão dento de um TD
 
-    await page.getByText('row', {name: movie.title}).getByRole('button').click()
+        await this.page.getByRole('row', { name: title }).getByRole('button').click()
 
-    //esta chamada esta clicando no neste elemento e este elemento é uma classa
-    // await page.click('.request-removal')
-    
-    await page.click('.confirm-removal')
+        //esta chamada esta clicando no neste elemento e este elemento é uma classa
+        // await page.click('.request-removal')
+
+        await this.page.click('.confirm-removal')
 
     }
 
