@@ -1,0 +1,76 @@
+{
+  "the_walking_dead": {
+      "title": "The Walking Dead",
+      "overview": "Um grupo de sobreviventes luta para se manter vivo em um mundo pós-apocalíptico dominado por zumbis.",
+      "company": "Paramount Pictures",
+      "release_year": 2010,
+      "seasons": "11",
+      "featured": false,
+      "cover": "/covers/tvshows/the_walking_dead.jpg"
+  },
+  "fear_the_walking_dead": { 
+      "title": "Fear the Walking Dead",
+      "overview": "Spin-off de The Walking Dead que mostra os primeiros dias do surto zumbi a partir de outra perspectiva.",
+      "company": "Universal Pictures",
+      "release_year": 2015,
+      "seasons": 8,
+      "featured": false,
+      "cover": "/covers/tvshows/fear_the_walking_dead.jpg"
+  },
+  "z_nation": {
+      "title": "Z Nation",
+      "overview": "Após um apocalipse zumbi, um grupo deve transportar o único sobrevivente de uma infecção zumbi pelos EUA.",
+      "company": "NetFlix",
+      "release_year": 2014,
+      "seasons": "5",
+      "featured": false,
+      "cover": "/covers/tvshows/z_nation.jpg"
+  },
+  "search": {
+      "input": "zumbitvshows",
+      "outputs": [
+            "Black Summer",
+            "Kingdom",
+            "All of Us Are Dead",
+            "The Last of Us"
+        ],
+        "data": [
+            {
+                "title": "Black Summer",
+                "overview": "Durante os primeiros dias de um apocalipse zumbi, um grupo de estranhos se une para tentar sobreviver.",
+                "company": "Netflix",
+                "release_year": 2019,
+                "seasons": 2,
+                "featured": false,
+                "cover": "/covers/tvshows/z_nation.jpg"
+            },
+            {
+                "title": "Kingdom",
+                "overview": "Na Coreia feudal, um príncipe investiga uma misteriosa praga que transforma os mortos em zumbis.",
+                "company": "Netflix",
+                "release_year": 2019,
+                "seasons": 2,
+                "featured": false,
+                "cover": "/covers/tvshows/z_nation.jpg"
+            },
+            {
+                "title": "All of Us Are Dead",
+                "overview": "Estudantes ficam presos em uma escola durante um surto zumbi e lutam para sobreviver.",
+                "company": "Netflix",
+                "release_year": 2022,
+                "seasons": 1,
+                "featured": false,
+                "cover": "/covers/tvshows/z_nation.jpg"
+            },
+            {
+                "title": "The Last of Us",
+                "overview": "Em um mundo devastado por um fungo mortal, Joel e Ellie cruzam os EUA em busca de esperança.",
+                "company": "Netflix",
+                "release_year": 2023,
+                "seasons": 1,
+                "featured": false,
+                "cover": "/covers/tvshows/z_nation.jpg"
+            }
+        ]
+    }
+}
