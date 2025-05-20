@@ -1,31 +1,31 @@
 {
-    "a_noite_dos_mortos_vivos": {
-        "title": "A Noite dos Mortos-Vivos",
-        "overview": "Um grupo de pessoas se refugia em uma casa isolada para escapar de zumbis canibais que surgem após um evento misterioso.",
-        "company": "NetFlix",
-        "release_year": 1972,
-        "featured": true,
-        "cover": "/covers/movies/mortos-vivos.jpg"
-    },
-    "madrugada_dos_mortos": {
-        "title": "Madrugada dos Mortos",
-        "overview": "Sobreviventes de um surto zumbi se escondem em um shopping enquanto o caos domina o mundo exterior.",
-        "company": "Universal Pictures",
-        "release_year": 2004,
-        "featured": false,
-        "cover": "/covers/movies/madrugada.jpg"
-    },
-    "guerra_mundial_z": {
-        "title": "Guerra Mundial Z",
-        "overview": "Um ex-investigador da ONU viaja pelo mundo tentando encontrar uma solução para uma pandemia zumbi global.",
-        "company": "Paramount Pictures",
-        "release_year": 2013,
-        "featured": false,
-        "cover": "/covers/movies/wwz.png"
-    },
-    "search":{
-        "input": "zumbi",
-        "outputs": [
+  "a_noite_dos_mortos_vivos": {
+      "title": "A Noite dos Mortos-Vivos",
+      "overview": "Um grupo de pessoas se refugia em uma casa isolada para escapar de zumbis canibais que surgem após um evento misterioso.",
+      "company": "NetFlix",
+      "release_year": 1972,
+      "featured": true,
+      "cover": "/covers/movies/mortos-vivos.jpg"
+  },
+  "madrugada_dos_mortos": {
+      "title": "Madrugada dos Mortos",
+      "overview": "Sobreviventes de um surto zumbi se escondem em um shopping enquanto o caos domina o mundo exterior.",
+      "company": "Universal Pictures",
+      "release_year": 2004,
+      "featured": false,
+      "cover": "/covers/movies/madrugada.jpg"
+  },
+  "guerra_mundial_z": {
+      "title": "Guerra Mundial Z",
+      "overview": "Um ex-investigador da ONU viaja pelo mundo tentando encontrar uma solução para uma pandemia zumbi global.",
+      "company": "Paramount Pictures",
+      "release_year": 2013,
+      "featured": false,
+      "cover": "/covers/movies/wwz.png"
+  },
+  "search":{
+      "input": "zumbi",
+      "outputs": [
             "Zumbilândia",
             "Invasão Zumbi",
             "Meu namorado é um Zumbi"
