@@ -42,34 +42,34 @@
                 "release_year": 2019,
                 "seasons": 2,
                 "featured": false,
-                "cover": "/covers/tvshows/z_nation.jpg"
+                "cover": "/covers/tvshows/black_summer.jpeg"
             },
             {
                 "title": "Kingdom",
                 "overview": "Na Coreia feudal, um príncipe investiga uma misteriosa praga que transforma os mortos em zumbis.",
-                "company": "Netflix",
+                "company": "Lionsgate Films",
                 "release_year": 2019,
                 "seasons": 2,
                 "featured": false,
-                "cover": "/covers/tvshows/z_nation.jpg"
+                "cover": "/covers/tvshows/kingdom.jpg"
             },
             {
                 "title": "All of Us Are Dead",
                 "overview": "Estudantes ficam presos em uma escola durante um surto zumbi e lutam para sobreviver.",
-                "company": "Netflix",
+                "company": "Sony Pictures",
                 "release_year": 2022,
                 "seasons": 1,
                 "featured": false,
-                "cover": "/covers/tvshows/z_nation.jpg"
+                "cover": "/covers/tvshows/all_of_are_dead.jpg"
             },
             {
                 "title": "The Last of Us",
                 "overview": "Em um mundo devastado por um fungo mortal, Joel e Ellie cruzam os EUA em busca de esperança.",
-                "company": "Netflix",
+                "company": "Amazon Studios",
                 "release_year": 2023,
                 "seasons": 1,
                 "featured": false,
-                "cover": "/covers/tvshows/z_nation.jpg"
+                "cover": "/covers/tvshows/the_last_of_us.jpg"
             }
         ]
     }
