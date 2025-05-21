@@ -1,11 +1,14 @@
+require('dotenv').config()
+
 const { Pool } = require('pg')
 
 const DbConfig = {
-    host: 'localhost',
-    user: 'postgres',
-    port: 5432,
-    password: 'pwd123',
-    database: 'zombieplus'
+    
+    user: process.env.DB_USER,
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE,
 }
 
 export async function executeSQL(sqlScript) {
