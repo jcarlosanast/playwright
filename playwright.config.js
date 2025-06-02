@@ -24,8 +24,15 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
-  /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+  reporter: [
+    ['dot'],
+  //podemos usar JSON para importar em uma ferramenta de observabilidade e criar boards e históricos
+  //  ['html', {  outputFile: 'test-results.json' }]
+
+    //Utilizando o template do TESULTS subistiuindo o HMTML
+    ['playwright-tesults-reporter', {'tesults-target': process.env.TOKEN}]
+  ],
+    /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
@@ -37,7 +44,10 @@ export default defineConfig({
      screenshot: 'only-on-failure',
     //Ativa video do caso de testes .. neste exeplo os testes de falharam
      video: 'retain-on-failure',
-     baseURL: process.env.BASE_URL
+     baseURL: process.env.BASE_URL,
+
+     //Definição da tela 
+     viewport: {width: 1920, height: 1080}
   },
 
   /* Configure projects for major browsers */

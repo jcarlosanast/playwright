@@ -33,4 +33,14 @@ npx playwright test --ui
 npx playwright show-report
 ```
 
+## 🤖 Server
+
+- Web
+QAx/apps/zombieplus/web
+npm run dev
+
+- Backend
+QAx/apps/zombieplus/api
+npm run dev
+
 <hr>
